@@ -1,12 +1,8 @@
 # 🛒 Zepto SQL Data Analysis Project
 
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/GitHub-Portfolio%20Project-black?style=for-the-badge&logo=github)
-
 ---
 
-## 📌 Project Background
+## Project Background
 
 **Zepto** is one of India's fastest-growing quick-commerce grocery delivery platforms, promising 10-minute delivery across major cities. This project analyses Zepto's product catalogue data using **MySQL**, covering product categories, pricing, discounts, stock availability, and inventory weight.
 
@@ -18,13 +14,11 @@ The goal is to simulate the kind of **data exploration and business analysis** a
 
 - Explore and clean raw product data
 - Understand the product catalogue structure across categories
-- Analyse pricing, discounts, and stock availability
-- Identify high-value products, revenue potential, and inventory metrics
 - Answer business-relevant questions using SQL queries
 
 ---
 
-## 🗂️ Dataset Overview
+## Dataset Overview
 
 The dataset contains **3,727 rows** of product data from Zepto's catalogue.
 
@@ -43,7 +37,7 @@ The dataset contains **3,727 rows** of product data from Zepto's catalogue.
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 - **MySQL 8.0** — Query writing and data analysis
 - **MySQL Workbench** — GUI for database management
@@ -51,7 +45,7 @@ The dataset contains **3,727 rows** of product data from Zepto's catalogue.
 
 ---
 
-## 🗃️ Database Setup
+## Database Setup
 
 ```sql
 CREATE DATABASE zepto_sql;
@@ -60,7 +54,7 @@ USE zepto_sql;
 
 ---
 
-## 🔍 Data Exploration
+## Data Exploration
 
 ### Count of Total Rows
 ```sql
@@ -263,11 +257,11 @@ ORDER BY total_weight DESC;
 
 ## 💡 Key Insights
 
-- 📦 **Cooking Essentials** and **Fruits & Vegetables** are the dominant categories in the dataset.
-- 💸 Several **premium products (MRP > ₹300)** are currently out of stock, representing missed revenue.
-- 🏷️ A subset of high-MRP products (> ₹500) carry **less than 10% discount**, indicating low promotional push.
-- ⚖️ The **price-per-gram** analysis reveals significant variation in value across product categories.
-- 🗃️ **Bulk inventory weight** is concentrated in a few key categories, useful for warehouse planning.
+- **Cooking Essentials** and **Fruits & Vegetables** are the dominant categories in the dataset.
+- Several **premium products (MRP > ₹300)** are currently out of stock, representing missed revenue.
+- A subset of high-MRP products (> ₹500) carry **less than 10% discount**, indicating low promotional push.
+- The **price-per-gram** analysis reveals significant variation in value across product categories.
+- **Bulk inventory weight** is concentrated in a few key categories, useful for warehouse planning.
 
 ---
 
@@ -278,6 +272,7 @@ zepto-sql-analysis/
 │
 ├── README.md               ← Project documentation (this file)
 └── zepto_workbook.sql      ← All SQL queries (exploration, cleaning, analysis)
+└── zepto_v1                ← Complete dataset from Kaggle)
 ```
 
 ---
@@ -286,7 +281,7 @@ zepto-sql-analysis/
 
 I'm an aspiring data analyst passionate about turning raw data into meaningful insights using SQL, Excel, and data visualisation tools.
 
-📫 Connect with me on [LinkedIn](#) | 🐙 More projects on [GitHub](#)
+📫 Connect with me on [LinkedIn](https://in.linkedin.com/in/deeksha-hurria?original_referer=https%3A%2F%2Fwww.bing.com%2F) | 🐙 More projects on [GitHub]()
 
 ---
 
