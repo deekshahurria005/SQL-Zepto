@@ -254,7 +254,54 @@ ORDER BY total_weight DESC;
 ```
 
 ---
+### Q9 — Top Revenue-Generating Products (Pareto Insight)
 
+> *Which products contribute the highest revenue, indicating potential top 20% performers?*
+
+```sql
+SELECT name,
+       category,
+       ROUND(discountedSellingPrice * availableQuantity, 2) AS product_revenue
+FROM zepto
+GROUP BY name, category, discountedSellingPrice, availableQuantity
+ORDER BY product_revenue DESC
+LIMIT 50;
+```
+
+---
+
+### Q10 — Stock-Out Rate by Price Tier
+
+> *How does stock availability vary across different pricing segments?*
+
+```sql
+SELECT 
+  CASE 
+    WHEN mrp < 100 THEN 'Budget (<₹100)'
+    WHEN mrp < 300 THEN 'Mid (₹100–300)'
+    WHEN mrp < 500 THEN 'Premium (₹300–500)'
+    ELSE 'Luxury (>₹500)'
+  END AS price_tier,
+  COUNT(*) AS total_products,
+  SUM(
+    CASE 
+      WHEN outOfStock = 1 OR outOfStock = 'true' OR outOfStock = 'TRUE' 
+      THEN 1 ELSE 0 
+    END
+  ) AS out_of_stock,
+  ROUND(
+    SUM(
+      CASE 
+        WHEN outOfStock = 1 OR outOfStock = 'true' OR outOfStock = 'TRUE' 
+        THEN 1 ELSE 0 
+      END
+    ) * 100.0 / COUNT(*), 1
+  ) AS stockout_rate_pct
+FROM zepto
+GROUP BY price_tier
+ORDER BY MIN(mrp);
+```
+```
 ## 💡 Key Insights
 
 - **Cooking Essentials** and **Fruits & Vegetables** are the dominant categories in the dataset.
